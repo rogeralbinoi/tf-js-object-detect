@@ -34,11 +34,13 @@ function enableCam(event) {
   });
 }
 
-cocoSsd.load().then(function (loadedModel) {
-  model = loadedModel;
-  demosSection.classList.remove('invisible');
-  modelSpinner.classList.add('removed');
-});
+setTimeout(function () {
+  cocoSsd.load().then(function (loadedModel) {
+    model = loadedModel;
+    demosSection.classList.remove('invisible');
+    modelSpinner.classList.add('removed');
+  });
+}, 0)
 
 
 
